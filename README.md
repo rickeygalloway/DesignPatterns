@@ -9,18 +9,73 @@ Plurasight course used to get back up to speed with .NET.  Lots of work on desig
  - Github
 
 
-# Singleton Pattern
-## 2024-01-16
+# Singleton Pattern - 2024-01-16
 
 Creational pattern of a class to ensure it has only a single class instance.  Example: Logger, DB Connection, caching, configuration settings
 
 Using Lazy<T> implementation
 
 
-# Factory Pattern
-## 2024-01-16
+# Factory Pattern - 2024-01-16
 
-Creational pattern that provides an interface for creating objects of similar types.
+Creational pattern that provides an interface for creating objects of similar types.  Code example was weird for this one.  This is more like I've done in the past:
+
+```csharp
+using System;
+
+// Abstract Product
+public interface IAnimal
+{
+    void MakeSound();
+}
+
+// Concrete Products
+public class Dog : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+public class Cat : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine("Meow!");
+    }
+}
+
+// Factory
+public static class AnimalFactory
+{
+    public static IAnimal CreateAnimal(string animalType)
+    {
+        switch (animalType.ToLower())
+        {
+            case "dog":
+                return new Dog();
+            case "cat":
+                return new Cat();
+            default:
+                throw new ArgumentException("Invalid animal type.");
+        }
+    }
+}
+
+// Usage
+public class Program
+{
+    public static void Main()
+    {
+        IAnimal myAnimal = AnimalFactory.CreateAnimal("dog");
+        myAnimal.MakeSound();  // Output: Woof!
+
+        myAnimal = AnimalFactory.CreateAnimal("cat");
+        myAnimal.MakeSound();  // Output: Meow!
+    }
+}
+```
 
 
 
