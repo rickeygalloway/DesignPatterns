@@ -1,14 +1,12 @@
 # C# Design Patterns
-
 Plurasight course used to get back up to speed with .NET.  Lots of work on design patterns and newer .NET features.
 
 
 # Tools
-
-Visual Studio 2022
-.NET 8
-Pluralsight
-Github
+ - Visual Studio 2022
+ - .NET 8
+ - Pluralsight
+ - Github
 
 
 # Singleton Pattern
