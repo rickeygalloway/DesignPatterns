@@ -9,10 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		Notes.txt = Notes.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory\Factory.csproj", "{B5910C55-D1E3-45D4-82A5-99677E8FCF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory", "Factory\Factory.csproj", "{B5910C55-D1E3-45D4-82A5-99677E8FCF10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{A39C1BCB-4D07-4E1B-BCC7-08AAA010EA7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core Web API", "Core Web API\Core Web API.csproj", "{AC8C062C-E498-4259-AF39-F97F0D4CA21B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +33,14 @@ Global
 		{B5910C55-D1E3-45D4-82A5-99677E8FCF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5910C55-D1E3-45D4-82A5-99677E8FCF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5910C55-D1E3-45D4-82A5-99677E8FCF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39C1BCB-4D07-4E1B-BCC7-08AAA010EA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39C1BCB-4D07-4E1B-BCC7-08AAA010EA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39C1BCB-4D07-4E1B-BCC7-08AAA010EA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39C1BCB-4D07-4E1B-BCC7-08AAA010EA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8C062C-E498-4259-AF39-F97F0D4CA21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8C062C-E498-4259-AF39-F97F0D4CA21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8C062C-E498-4259-AF39-F97F0D4CA21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8C062C-E498-4259-AF39-F97F0D4CA21B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
