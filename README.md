@@ -78,11 +78,6 @@ public class Program
 ```
 
 
-
-# Abstract Factory Pattern - 2024-01-16
-
-Creation pattern related to factory pattern above. Often called Factory Pattern.
-
 # Weather REST API - 2024-01-19
 
 Creation API service for using different weather api services. Used AI to generate some of the tedious classes for me.
@@ -94,3 +89,7 @@ Creation API service for using different weather api services. Used AI to genera
 
  I will come back to build on this
  
+
+# Abstract Factory Pattern - 2024-01-26
+
+Creation pattern related to factory pattern above. Often called Factory Pattern.
