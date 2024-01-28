@@ -16,7 +16,7 @@ Creational pattern of a class to ensure it has only a single class instance.  Ex
 Using Lazy<T> implementation
 
 
-# Factory Pattern - 2024-01-16
+# Factory Method Pattern - 2024-01-16
 
 Creational pattern that provides an interface for creating objects of similar types.  Code example was weird for this one.  This is more like I've done in the past:
 
@@ -93,3 +93,7 @@ Creation API service for using different weather api services. Used AI to genera
 # Abstract Factory Pattern - 2024-01-26
 
 Creation pattern related to factory pattern above. Often called Factory Pattern.
+
+# Adapter Pattern (Wrapper Pattern) - 2024-01-28
+
+Structural pattern used to let classes work together because of incompatable interfaces. Object adapter and Class adapter
