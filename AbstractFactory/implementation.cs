@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
+	public enum ShoppingCountry
+	{
+		Belgium,
+		France
+	}
+
 	public interface IShoppingCartPurchaseFactory
 	{
 		IDiscountService CreateDiscountService();
@@ -45,7 +51,7 @@ namespace AbstractFactory
 		public int DiscountPercentage => 10;
 	}
 
-	public class BelguimShoppingCaredPurchaseFactory : IShoppingCartPurchaseFactory
+	public class BelguimShoppingCartPurchaseFactory : IShoppingCartPurchaseFactory
 	{
 		public IDiscountService CreateDiscountService()
 		{
@@ -58,7 +64,7 @@ namespace AbstractFactory
 		}
 	}
 
-	public class FranceShoppingCaredPurchaseFactory : IShoppingCartPurchaseFactory
+	public class FranceShoppingCartPurchaseFactory : IShoppingCartPurchaseFactory
 	{
 		public IDiscountService CreateDiscountService()
 		{
@@ -68,6 +74,29 @@ namespace AbstractFactory
 		public IShippingCostService CreateShippingCostService()
 		{
 			return new FranceShippingCostService();
+		}
+	}
+
+	public static class ShoppingCartFactory
+	{
+		public static IShoppingCartPurchaseFactory GetShoppingCart(ShoppingCountry country)
+		{
+			IShoppingCartPurchaseFactory factory;
+			switch (country)
+			{
+				case ShoppingCountry.France:
+					factory = new FranceShoppingCartPurchaseFactory();
+					break;
+
+				case ShoppingCountry.Belgium:
+					factory = new BelguimShoppingCartPurchaseFactory();
+					break;
+
+				default:
+					throw new ArgumentException("Invalid shopping country.");
+			}
+
+			return factory ?? throw new Exception("Factory not initialized.");
 		}
 	}
 
@@ -86,7 +115,7 @@ namespace AbstractFactory
 
 		public void CalculateCost()
 		{
-			Console.WriteLine("Total Cost: " + (_orderCost - (_orderCost / 100 * _discountService.DiscountPercentage) + _shippingCostService.ShippingCost));
+			Console.WriteLine("			Total Cost: " + (_orderCost - (_orderCost / 100 * _discountService.DiscountPercentage) + _shippingCostService.ShippingCost));
 		}
 	}
 }
