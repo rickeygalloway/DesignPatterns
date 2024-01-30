@@ -97,3 +97,14 @@ Creation pattern related to factory pattern above. Often called Factory Pattern.
 # Adapter Pattern (Wrapper Pattern) - 2024-01-28
 
 Structural pattern used to let classes work together because of incompatable interfaces. Object adapter and Class adapter
+
+# Chain of Responsibility Pattern - 2024-01-28
+
+Behavioral pattern used to set order of operations by chaining them together of events - example of usage:
+```
+var documentHandlerChain = new DocumentTitleHandler();
+documentHandlerChain.SetSuccessor(new DocumentLastModifiedHandler())
+	.SetSuccessor(new DocumentLastModifiedHandler())
+	.SetSuccessor(new DocumentApprovedByLitigation())
+	.SetSuccessor(new DocumentApprovedByManagment());
+```
